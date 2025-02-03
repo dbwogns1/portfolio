@@ -37,7 +37,7 @@
       color:#1abc9c  !important;
     }
     .bg-1{
-      background-color: #1abc9c;
+      background-color: #97acf1;
       color:#ffffff;
     }
     .bg-2 {
@@ -63,11 +63,53 @@
       font-family: 'jeju halla';
     }
 
-    #prebox{
-      background: #474e5d;
-      color: white;
-      border-color: #474e5d;
+    #about .btn {
+      margin-top: 30px;
     }
+
+    #about div {
+      font-size: 20px;
+    }
+
+    /* 이미지를 감싸는 div에 hover 효과를 적용 */
+    .portfolio-img {
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease; /* 부드러운 확대 효과 */
+    }
+  
+   
+    /* 마우스를 이미지 위에 올렸을 때 */
+    .portfolio-img:hover img {
+      transform: scale(1.1); /* 이미지를 1.5배 확대 */
+    }
+
+
+
+    .custom-btn {
+    background-color: #e5e9b1;
+    border-color: #e5e9b1;
+  } 
+
+  .custom-btn:hover {
+    color:white
+  }
+
+    #contact{
+      color: #2f2f2f;
+    }
+
+
+    #skill1 {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
+    #skill2 {
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
     @media screen and (max-width:767px) {
       #portfolio p {
         margin-top: 30px;
@@ -99,14 +141,15 @@
 
   <div class="container-fluid bg-1 text-center">
     <h3 class="margin">유재훈의 Portfolio</h3>
-    <img src="img/bird150.jpg" class="img-circle" alt="Bird">
+    <img src="img/computer.jpg" class="img-circle" alt="Bird">
     <h3>발전하는 개발자가 목표인 유재훈의 포트폴리오입니다.</h3>
   </div>
 
   <div id="about" class="container-fluid bg-2 text-center">
     <h3 class="margin">유재훈이란?</h3>
-    <pre id="prebox">저는 <b>Developer</b>가되기위해 HTTP,CSS,JS,SQL,JAVA를 접하고 공부하며 
-      나의 기술들을 발전시키고있습니다.</pre>
+    <div>저는 <b>Developer</b>가되기위해 HTTP,CSS,JS,SQL,JAVA를 접하고 공부하며
+      <br>
+      나의 기술들을 발전시키고있습니다.</div>
     <a href="https://github.com/dbwogns1" class="btn btn-default btn-lg">my github</a>
   </div>
 
@@ -114,24 +157,18 @@
     <h3 class="margin">Portfolio</h3>
     <div class="row">
       <div class="col-sm-3">
-        <p>브랜드 홍보페이지</p>
-        <a href="https://dbwogns1.github.io/coupangeats/" target="_blank">
-        <img src="img/birds1.jpg" class="img-responsive" style="width:100%" alt="Image">
-        </a>
-        <div>
+        <p>Dior 브랜드 홍보페이지</p>
+        <a href="https://dbwogns1.github.io/Dior/" target="_blank">
+          <div class="portfolio-img">
+        <img src="img/Dior.png" class="img-responsive" style="width:100%" alt="Image">
+          </div>
+      </a>
+        <div id="skill1">
           사용기술:HTML,CSS,동영상배경,transition animation
         </div>
-      </div>
-      <div class="col-sm-3">
-        <p>쿠팡이츠 데모</p>
-        <a href="https://dbwogns1.github.io/coupangeats/" target="_blank">
-        <img src="img/coupangeats.png" class="img-responsive" style="width:100%" alt="Image">
-        </a>
-        <div>
-          사용기술:HTML,CSS,Bootstrap,반응형 웹
-        </div>
+      
         <!-- 모달 --------------------------------------------------------------------------------->
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">more</button>
+        <button type="button" class="btn custom-btn btn-lg" data-toggle="modal" data-target="#myModal">설명</button>
         
         <div id="myModal" class="modal fade" role="dialog">
           <div class="modal-dialog">
@@ -141,8 +178,48 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">개발내용</h4>
               </div>
+              <div class="modal-body1">
+                <p>html, css 를 기반으로 Dior 브랜드 홍보페이지를 구현했습니다.
+                  <br>
+                  요소들을 어떻게 어디에 배치해야할지 고민하며  마우스를 가져다가 원하는 위치에
+                  <br>
+                  올라간 경우 css를 이용하여 박스가 위치를 바꾸는 것을 디자인에 적용했습니다.
+                </p>
+              </div>
+              <div class="modal-footer">
+                <a class="btn btn-default" href="https://dbwogns1.github.io/Dior/" 
+                target="_blank">보기</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- /모달 -->
+      </div>
+
+      <div class="col-sm-3">
+        <p>쿠팡이츠 데모</p>
+        <a href="https://dbwogns1.github.io/coupangeats/" target="_blank">
+          <div class="portfolio-img">
+        <img src="img/coupangeats.png" class="img-responsive" style="width:100%" alt="Image">
+          </div>
+      </a>
+        <div id="skill2">
+          사용기술:HTML,CSS,Bootstrap,반응형 웹
+        </div>
+        <!-- 모달 --------------------------------------------------------------------------------->
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">설명</button>
+        
+        <div id="myModal2" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">개발내용</h4>
+              </div>
               <div class="modal-body">
-                <p>html5, css3 를 기반으로 bootstrap을 사용해서 responsive web을 구현했습니다.
+                <p>html, css 를 기반으로 bootstrap을 사용해서 responsive web을 구현했습니다.
                   <br>
                   bootstrap을 사용해서 빠르고 편하게 개발할 수 있었고 , media query사용법이 중요하다는
                   것을 배웠습니다.
@@ -158,6 +235,7 @@
         </div>
         <!-- /모달 -->
       </div>
+
       <div class="col-sm-3">
         <p>Min Project2</p>
         <img src="img/birds3.jpg" class="img-responsive" style="width:100%" alt="Image">
