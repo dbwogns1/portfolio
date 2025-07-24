@@ -1,261 +1,196 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <style>
-   @font-face {
-    font-family: 'jeju gothic';
-    src: url('./font/제주고딕\(윈도우\).ttf');
-   }
-   @font-face {
-    font-family: 'jeju halla';
-    src: url('./font/제주한라산\(윈도우\).ttf');
-   }
-   body {
-    font-family: 'jeju gothic';
-    line-height: 1.8;
-    color: #f5f6f7;
-   }
-   p{font-size: 16px;}
-
-   .margin{margin-bottom: 45px;}
-
-    .navbar {
-      padding-top: 15px;
-      padding-bottom: 15px;
-      border-radius: 0;
-      border-bottom: 0;
-      font-size: 12px;
-      letter-spacing: 5px;
-    }
-    .navbar-nav li a:hover{
-      color:#1abc9c  !important;
-    }
-    .bg-1{
-      background-color: #97acf1;
-      color:#ffffff;
-    }
-    .bg-2 {
-      background-color: #474e5d; /* Dark Blue */
-      color: #ffffff;
-    }
-    .bg-3 {
-      background-color: #ffffff; /* White */
-      color: #555555;
-    }
-    .bg-4 {
-      background-color: #2f2f2f;
-      color:#ffffff;
-    }
-    .bg-5 {
-     background-color: #dddddd;
-    }
-    .container-fluid{
-      padding-top: 70px;
-      padding-bottom: 70px;
-    }
-    .container-fluid h3 {
-      font-family: 'jeju halla';
-    }
-
-    #about .btn {
-      margin-top: 30px;
-    }
-
-    #about div {
-      font-size: 20px;
-    }
-
-    /* 이미지를 감싸는 div에 hover 효과를 적용 */
-    .portfolio-img {
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.3s ease; /* 부드러운 확대 효과 */
-    }
-  
-   
-    /* 마우스를 이미지 위에 올렸을 때 */
-    .portfolio-img:hover img {
-      transform: scale(1.1); /* 이미지를 1.5배 확대 */
-    }
-
-
-
-    .custom-btn {
-    background-color: #e5e9b1;
-    border-color: #e5e9b1;
-  } 
-
-  .custom-btn:hover {
-    color:white
-  }
-
-    #contact{
-      color: #2f2f2f;
-    }
-
-
-    #skill1 {
-      margin-top: 30px;
-      margin-bottom: 30px;
-    }
-
-    #skill2 {
-      margin-top: 30px;
-      margin-bottom: 30px;
-    }
-
-    @media screen and (max-width:767px) {
-      #portfolio p {
-        margin-top: 30px;
-      }
-    }
-  </style>
+  <title>YU JAE HOON Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+  <link href="css/style.css" rel="stylesheet">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
-  
-  <nav class="navbar navbar-default">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">YU JAE HOON</a>
-      </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#about">자기소개</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">연락처</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
 
-  <div class="container-fluid bg-1 text-center">
-    <h3 class="margin">유재훈의 Portfolio</h3>
-    <img src="img/computer.jpg" class="img-circle" alt="Bird">
-    <h3>발전하는 개발자가 목표인 유재훈의 포트폴리오입니다.</h3>
-  </div>
-
-  <div id="about" class="container-fluid bg-2 text-center">
-    <h3 class="margin">유재훈이란?</h3>
-    <div>저는 <b>Developer</b>가되기위해 HTTP,CSS,JS,SQL,JAVA를 접하고 공부하며
-      <br>
-      나의 기술들을 발전시키고있습니다.</div>
-    <a href="https://github.com/dbwogns1" class="btn btn-default btn-lg">my github</a>
-  </div>
-
-  <div id="portfolio" class="container-fluid bg-3 text-center">
-    <h3 class="margin">Portfolio</h3>
-    <div class="row">
-      <div class="col-sm-3">
-        <p>Dior 브랜드 홍보페이지</p>
-        <a href="https://dbwogns1.github.io/Dior/" target="_blank">
-          <div class="portfolio-img">
-        <img src="img/Dior.png" class="img-responsive" style="width:100%" alt="Image">
-          </div>
-      </a>
-        <div id="skill1">
-          사용기술:HTML,CSS,동영상배경,transition animation
-        </div>
+  <header class="hero">
+    <div class="nav-wrapper">
+      <div class="container nav">
+        <div class="logo"><a href="#">YU JAE HOON</a></div>
       
-        <!-- 모달 --------------------------------------------------------------------------------->
-        <button type="button" class="btn custom-btn btn-lg" data-toggle="modal" data-target="#myModal">설명</button>
-        
-        <div id="myModal" class="modal fade" role="dialog">
-          <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">개발내용</h4>
-              </div>
-              <div class="modal-body1">
-                <p>html, css 를 기반으로 Dior 브랜드 홍보페이지를 구현했습니다.
-                  <br>
-                  요소들을 어떻게 어디에 배치해야할지 고민하며  마우스를 가져다가 원하는 위치에
-                  <br>
-                  올라간 경우 css를 이용하여 박스가 위치를 바꾸는 것을 디자인에 적용했습니다.
-                </p>
-              </div>
-              <div class="modal-footer">
-                <a class="btn btn-default" href="https://dbwogns1.github.io/Dior/" 
-                target="_blank">보기</a>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <!-- /모달 -->
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
       </div>
 
-      <div class="col-sm-3">
-        <p>쿠팡이츠 데모</p>
-        <a href="https://dbwogns1.github.io/coupangeats/" target="_blank">
-          <div class="portfolio-img">
-        <img src="img/coupangeats.png" class="img-responsive" style="width:100%" alt="Image">
-          </div>
-      </a>
-        <div id="skill2">
-          사용기술:HTML,CSS,Bootstrap,반응형 웹
-        </div>
-        <!-- 모달 --------------------------------------------------------------------------------->
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">설명</button>
-        
-        <div id="myModal2" class="modal fade" role="dialog">
-          <div class="modal-dialog">
-            <!-- Modal content-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">개발내용</h4>
-              </div>
-              <div class="modal-body">
-                <p>html, css 를 기반으로 bootstrap을 사용해서 responsive web을 구현했습니다.
-                  <br>
-                  bootstrap을 사용해서 빠르고 편하게 개발할 수 있었고 , media query사용법이 중요하다는
-                  것을 배웠습니다.
-                </p>
-              </div>
-              <div class="modal-footer">
-                <a class="btn btn-default" href="https://dbwogns1.github.io/coupangeats/" 
-                target="_blank">보기</a>
-              </div>
-            </div>
+      
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
 
-          </div>
+      </div>
+    </div>
+    <h1>Hello, I'm <span>Yu Jae Hoon</span></h1>
+    <p>
+      안녕하세요.<br>
+      백엔드 시스템의 구조와 안정성에 집중하며 꾸준히 성장하고 있는 유재훈입니다.<br>
+      안정적인 시스템 개발을 목표로 하고 있습니다.
+    </p>
+    <a href="#projects" class="hero-btn">프로젝트 보러가기</a>
+    <section id="about">
+    <div class="container">
+      <header class="section-header">
+        <h2>About</h2>
+      </header>
+      <div class="about-grid">
+        <div class="about-item">
+          <i class="fas fa-user"></i>
+          <h4>이름</h4>
+          <p>유재훈</p>
         </div>
-        <!-- /모달 -->
+        <div class="about-item">
+          <i class="fas fa-calendar-alt"></i>
+          <h4>생년월일</h4>
+          <p>01.08.14</p>
+        </div>
+        <div class="about-item">
+          <i class="fas fa-envelope"></i>
+          <h4>이메일</h4>
+          <p>zxcoos@naver.com</p>
+        </div>
+        <div class="about-item">
+        <i class="fab fa-github"></i>
+        <h4>GitHub</h4>
+        <p>
+        <a href="https://github.com/dbwogns1" target="_blank" >github.com/dbwogns1</a>
+        </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </header>
+
+
+  <section id="skills">
+  <div class="container">
+    <h2>Skills</h2>
+
+    <div class="skill-category-row">
+      <div class="skill-category-box">
+        <h3>Language</h3>
+        <div class="skills-grid">
+          <div class="skill-card">Java</div>
+          <div class="skill-card">JavaScript</div>
+        </div>
       </div>
 
-      <div class="col-sm-3">
-        <p>Min Project2</p>
-        <img src="img/birds3.jpg" class="img-responsive" style="width:100%" alt="Image">
+      <div class="skill-category-box">
+        <h3>Frontend</h3>
+        <div class="skills-grid">
+          <div class="skill-card">HTML</div>
+          <div class="skill-card">CSS</div>
+          <div class="skill-card">React</div>
+        </div>
       </div>
-      <div class="col-sm-3">
-        <p>Final Project</p>
-        <img src="img/birds3.jpg" class="img-responsive" style="width:100%" alt="Image">
+
+      <div class="skill-category-box">
+        <h3>Backend</h3>
+        <div class="skills-grid">
+          <div class="skill-card">Spring Boot</div>
+          <div class="skill-card">JSP</div>
+        </div>
+      </div>
+
+      <div class="skill-category-box">
+        <h3>Database</h3>
+        <div class="skills-grid">
+          <div class="skill-card">Oracle</div>
+          <div class="skill-card">MariaDB</div>
+        </div>
+      </div>
+
+      <div class="skill-category-box">
+        <h3>Tools</h3>
+        <div class="skills-grid">
+          <div class="skill-card">Git</div>
+          <div class="skill-card">GitHub</div>
+          <div class="skill-card">Figma</div>
+        </div>
       </div>
     </div>
   </div>
-  
-  
-  <div id="contact" class="container-fluid bg-5 text-center">
-    <h3 class="margin">연락처</h3>
-    <p>카톡ID : jh0659@gmail.com</p>
-    <p>E-Mail : zxcoos@naver.com</p>
+</section>
+
+
+
+<section id="projects">
+  <div class="container">
+  <h2>Projects</h2>
+  <div class="project-list">
+
+    <!-- 프로젝트 1 -->
+    <div class="project-row">
+      <img src="img/Kakaobankdemo.png" alt="카카오뱅크 데모 이미지" class="project-img">
+      <div class="project-text">
+        <h4>카카오뱅크 데모 페이지</h4>
+        <p>
+          <strong>기간:</strong> 2025.02.11 ~ 2025.02.21<br>
+          <strong>개요:</strong> HTML, CSS, JavaScript 기반 정적 웹사이트 구현<br>
+          <strong>주요기능:</strong> 페이지 전환, 스크롤 애니메이션, 숫자 카운트업<br>
+          <strong>담당:</strong> 상품 안내 페이지 클론 코딩<br>
+          <strong>스택:</strong> HTML, CSS, JavaScript, jQuery, Figma, Jira, GitHub<br>
+          <strong>
+            <a href="https://dbwogns1.github.io/miniproject1/" target="_blank">사이트 링크</a> /
+            <a href="https://github.com/dbwogns1/miniproject1" target="_blank">GitHub</a>
+          </strong>
+        </p>
+      </div>
+    </div>
+
+    <!-- 프로젝트 2 -->
+    <div class="project-row">
+      <img src="img/yeogijeogi.png" alt="여행지 JSP 이미지" class="project-img">
+      <div class="project-text">
+        <h4>여행지 공유 플랫폼 (JSP)</h4>
+        <p>
+          <strong>기간:</strong> 2025.03.21 ~ 2025.04.15<br>
+          <strong>개요:</strong> JSP 기반 여행지 CRUD 웹 서비스<br>
+          <strong>주요기능:</strong> 게시글 등록, 이미지 업로드/삭제, 좋아요, 태그검색<br>
+          <strong>담당:</strong> 게시글 등록/수정/삭제, AJAX 기반 좋아요, 이미지 삭제 처리<br>
+          <strong>스택:</strong> JSP, Java Servlet, Oracle, jQuery, AJAX, Figma, Jira, GitHub<br>
+          <strong>
+            <a href="https://github.com/dbwogns1/yeogijeogi" target="_blank">GitHub</a>
+          </strong>
+        </p>
+      </div>
+    </div>
+
+    <!-- 프로젝트 3 -->
+    <div class="project-row">
+      <img src="img/Kickauction.png" alt="렌탈 매칭 플랫폼 이미지" class="project-img">
+      <div class="project-text">
+        <h4>축구/풋살 장비 렌탈 매칭 플랫폼</h4>
+        <p>
+          <strong>기간:</strong> 2025.05.22 ~ 2025.07.11<br>
+          <strong>개요:</strong> React + Spring Boot 기반 렌탈 입찰 서비스<br>
+          <strong>주요기능:</strong> 입찰, 채팅, 리뷰 작성, 권한별 로그인, 이미지 슬라이더<br>
+          <strong>담당:</strong> 판매자 등록/수정, 입찰 CRUD, 서버 이미지 삭제 처리<br>
+          <strong>스택:</strong> React, Spring Boot, JPA, MariaDB, Figma, Jira, GitHub<br>
+          <strong>
+            <a href="https://github.com/dbwogns1/Kickauction" target="_blank">GitHub</a>
+          </strong>
+        </p>
+      </div>
+    </div>
+   </div>
   </div>
-  
-  <footer class="container-fluid bg-4 text-center">
-    &copy; All rights reserved by YU JAE HOON
+</section>
+
+
+
+  <footer>
+    &copy; 2025 YU JAE HOON. All rights reserved.
   </footer>
+
 </body>
 </html>
